@@ -1,0 +1,169 @@
+#products {
+    @include container;
+    background: $background-double-color;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.carousel-sec3{
+    width: 65%;
+    height: 65%;
+    background-image: url(../../img-pin/section3-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+
+    .carousel {
+        background-color: $orange;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        overflow: hidden;
+        .carousel-inner {
+            overflow: visible;
+            width: 80%;
+        }
+        .carousel-caption {
+            position: relative;
+            display: flex;
+            text-align: left;
+            justify-content: center;
+            flex-direction: column;
+            font-family: $poppins;
+            margin-top: 45px;
+
+            .title-carousel-sect3 {
+               @include style-3;
+               color: $white;
+            }
+            .top-subtitle-carousel-sect3 {
+                @include style-2;
+                font-weight: bold;
+            }
+            .bottom-subtitle-carousel-sect3 {
+                @include style-2;
+                padding: 20px 0px;
+            }
+        }
+    }
+}
+
+.carousel-control-prev {
+    left: inherit;
+    margin-left: 50px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    margin: 30px 40px;
+}
+
+//Media queries
+
+@media screen and (max-width: 640px) {
+    #products {
+        height: auto;
+        padding: 50px 30px 150px 50px;
+    }
+    .carousel-sec3 {
+        width: 500px;
+        height: 250px;
+        .carousel{
+            width: 90%;
+            height: 70%;
+            top: 71%;
+            left: 7%;
+            box-shadow: -9px 8px 16px 1px rgba(0,0,0,0.21);
+            .carousel-caption {
+                margin-top: 13px;
+                .title-carousel-sect3 {
+                   font-size: 20px;
+                   line-height: 35px;
+                }
+                .top-subtitle-carousel-sect3 {
+                    font-size: 13px;
+                }
+                .bottom-subtitle-carousel-sect3 {
+                    font-size: 13px;
+                    padding: 5px 0px;
+                }
+        }
+    }    
+  }
+  .carousel-control-prev {
+    left: 36%;
+  }
+  .carousel-control-prev,
+   .carousel-control-next {
+    justify-content: right;
+    bottom: 60%;
+    margin: 30px 10px 20px 74px;
+   }
+   .carousel-control-prev-icon, 
+   .carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+}
+
+@media screen and (min-width: 640px) and (max-width: 870px) {
+    .carousel-sec3 {
+        width: 600px;
+        height: 350px;
+        position: relative;
+        bottom: 10%;
+        .carousel {
+            width: 65%;
+            height: 70%;
+            top: 70%;
+            left: 30%;
+            box-shadow: -9px 8px 16px 1px rgba(0,0,0,0.21);
+            .carousel-caption {
+                margin-top: 30px;
+                .title-carousel-sect3 {
+                   font-size: 25px;
+                }
+                .top-subtitle-carousel-sect3 {
+                    font-size: 16px;
+                }
+                .bottom-subtitle-carousel-sect3 {
+                    font-size: 16px;
+                    padding: 10px 0px;
+                }
+            }
+        }
+    }
+    .carousel-control-prev,
+   .carousel-control-next {
+    margin: 20px 40px;
+}
+
+}
+  
+  @media screen and (min-width: 870px) and (max-width: 1280px) {
+    .carousel-sec3 {
+        width: 800px;
+        height: 500px;
+        .carousel {
+            .carousel-caption {
+                .title-carousel-sect3 {
+                   font-size: 25px;
+                }
+                .top-subtitle-carousel-sect3 {
+                    font-size: 16px;
+                }
+                .bottom-subtitle-carousel-sect3 {
+                    font-size: 16px;
+                    padding: 10px 0px;
+                }
+            }
+        }
+    }
+    .carousel-control-prev,
+   .carousel-control-next {
+    margin: 20px 40px;
+    }
+}

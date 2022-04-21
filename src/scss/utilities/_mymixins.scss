@@ -1,0 +1,56 @@
+@mixin container {
+    width: 100%;
+    max-width: 2000px;
+    // comento la linea 5 para usar viewport
+    //height: 780px;
+    height: 100vh;
+    overflow: hidden; 
+} 
+
+@mixin style-1 {
+    font-family: $roboto;
+    font-style: $fs-normal;
+    font-weight: $fw-normal;
+    font-size: $fsz-16;
+    line-height: $line-s-28;
+    letter-spacing: $ls-0-22;
+    color: $dark-gray;
+    }
+
+@mixin style-2 {
+    font-family: $roboto;
+    font-style: $fs-normal;
+    font-weight: $fw-medium;
+    font-size: $fsz-16;
+    line-height: $line-s-21;
+    letter-spacing: $ls-0-22;
+    color: $white;
+    }
+
+@mixin style-3 {
+    font-family: $poppins;
+    font-style: $fs-normal;
+    font-weight: $fw-600;
+    font-size: $fsz-39;
+    line-height: $line-s-45;
+    letter-spacing: $ls-0-55;
+    color: $dark-gray;
+    }
+
+@mixin style-4 { //titulo header//
+    font-family:$poppins;
+    font-style: $fs-normal;
+    font-weight: $fw-600;
+    font-size: $fsz-48;
+    line-height: $line-s-48;
+    letter-spacing: $ls-0-67;
+    color: $white;
+    }
+
+@mixin btn-style {
+    width: 144px;
+    height: 48px;
+    background: #E0752F 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    border: none;
+}

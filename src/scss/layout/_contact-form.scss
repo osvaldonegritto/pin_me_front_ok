@@ -1,0 +1,131 @@
+#contact {
+    @include container;
+    position: relative;
+    background: $background-double-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-title {
+    @include style-3;
+    padding: 15px 0px;
+    margin-bottom: 50px;
+    span {
+        color: $orange;
+        }
+    }
+
+form {
+    padding: 0 80px;
+    width: 600px;
+}
+
+.form {
+    margin: auto;
+}
+
+form .campo {
+    position: relative;
+    margin: 30px 0;
+}
+
+input, textarea {
+    background: none;
+    color: $dark-gray;
+    font-size: 20px;
+    font-family: $roboto;
+    padding: 5px;
+    display: block;
+    resize: none;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #bebebe;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    color: #5e5d5d;
+}
+
+label {
+    @include style-2;
+    color: $light-gray;
+    font-weight: bold;
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label, 
+textarea:focus~label,
+textarea:valid~label{
+    top: -14px;
+    font-size: 12px;
+    color: $orange;
+}
+
+.btn-submt {
+    @include btn-style;
+    color: $white;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-img {
+    margin: 0px 80px 0px 20px;
+    .img-sec5 {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 640px) {
+    .contact-img{
+            display: none;
+        }
+    #contact{
+            background: #F2F4F1;
+            height: auto;
+            padding: 50px 20px;
+        }
+    .contact-title{
+        font-size: 25px;
+        margin: 0;
+        line-height: 35px;
+    }
+    label {
+       font-size: 15px;
+    }
+    input, textarea {
+        font-size: 15px;
+    }
+    form .campo {
+        position: relative;
+        margin: 20px 0;
+    }
+    form {
+        padding: 0 50px;
+    }
+    .btn-submt {
+        width: 120px;
+        height: 40px;
+        margin-top: 10px;
+    }
+  }
+
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+    .contact-img{
+        display: none;
+    }        
+    #contact{
+    background: #F2F4F1;
+
+    }
+  }

@@ -1,0 +1,238 @@
+*, ::before, ::after {
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+span {
+    display: block;
+  }
+
+#hero {
+    @include container;
+    background-image: url(../../img-pin/slider-1.png);
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $orange;
+}
+
+.nav-logo {
+    margin-left: 40px; 
+    padding: 0 50px;
+}
+
+.nav-img {
+    width: 100%;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin-right: 80px;
+
+    .nav-link {
+        @include style-2;
+        margin: 0 20px;
+        text-decoration: none;
+        width: max-content;
+        &:hover {
+            color: #eb6913;
+            border-bottom: 4px solid $orange;
+            padding: 40px 0px;
+            transition: 0.3s;
+        }
+    }
+}
+
+.nav-toggle {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 30px;
+    display: none;
+}
+
+.carousel-caption{
+    left: 9%;
+}
+
+.carousel-indicators{
+    margin-left: 9%;
+}
+
+.carousel-sec1 {
+    position: relative;
+    top: 650px;  
+    
+    .carousel-inner {
+        overflow: visible;
+    }
+
+    .carousel-caption {
+        text-align: left;
+        bottom: 200px;
+        h1 {
+        @include style-4;
+        margin: 30px 0;
+         }
+        p {
+        @include style-2;
+        margin: 40px 0;
+        }
+        .btn{
+            @include btn-style;
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: $white;
+                font-family: $roboto;
+                font-weight: bold;
+            }
+        }
+
+    }
+    .carousel-dark .carousel-caption {
+        color: $white;
+    }
+
+    .carousel-indicators {
+        justify-content: left;
+        bottom: 130px;
+
+        [data-bs-target]  {
+            border-radius: 50%;
+            margin: 8px;
+        }
+    }
+}
+
+//Media Queries
+
+//Celular
+
+@media screen and (max-width: 768px) {
+    #hero {
+        height: 600px;
+    }
+    .nav {
+        background: #e0752f;
+        height: 80px;
+    }
+    .nav-logo {
+        padding: 0px;
+    }
+    .nav-img {
+        width: 80%;
+    }
+    .nav-menu{
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background: #f2f4f1;
+        height: 300px;
+        top: 80px;
+        z-index: 5;
+        text-align: center;
+        line-height: 60px;
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+        li:hover, .nav-link-active{
+            background: #dce1da;
+        }   
+
+        .nav-link {
+            color: #000;
+            text-transform: uppercase; 
+            &:hover {
+                border-bottom: none;
+                padding: 0px;
+            }        
+        }
+    }
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        margin-right: 40px;
+    }
+
+    .nav-menu-visible{
+        left: 0;
+    }
+
+    .carousel-caption{
+        left: 9%;
+    }
+    
+    .carousel-indicators{
+        margin-left: 9%;
+    }
+    
+    .carousel-sec1 {
+        position: relative;
+        top: 650px;  
+        .carousel-caption {
+            text-align: left;
+            bottom: 240px;
+            h1 {
+                font-size: 33px;
+                line-height: 38px;
+                margin: 10px 0px 30px 0px;
+             }
+            p {
+                font-size: 14px;
+               margin: 20px 0px 30px 0px;
+            }
+            .btn{
+                width: 120px;
+                height: 40px;
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-family: $roboto;
+                    font-weight: bold;
+                }
+            }
+    
+        }
+        .carousel-dark .carousel-caption {
+            color: $white;
+        }
+    
+        .carousel-indicators {
+            bottom: 190px;
+        }
+    }
+    
+      
+  }
+
+//Tablet and Desktop
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+    .nav-logo {
+        padding: 0 20px;
+    }
+
+    .nav-img{
+        width: 85%;
+    }
+
+    .nav-menu {
+        margin-right: 40px;   
+    }
+}
